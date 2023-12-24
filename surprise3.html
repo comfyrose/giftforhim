@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-color: pink;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('car.gif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: white;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .letter-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto; /* Center the container */
+            max-width: 600px; /* Set a maximum width for better readability */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+            overflow: hidden; /* Hide overflow for the container */
+        }
+
+        h2 {
+            color: #ff80bf;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: calc(100% - 40px); /* Adjusting for padding */
+            height: 300px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none; /* Prevent textarea resizing */
+        }
+
+        button {
+            background-color: #ff80bf;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background GIF -->
+    <div class="background"></div>
+
+    <div class="content">
+        <h1>Gift 3</h1>
+        <div class="letter-container">
+            <h2>A Special Letter Just for You ♥</h2>
+            <textarea readonly>This is a special letter just for you. I wanted to express my deepest feelings and gratitude. Your presence in my life has been a true gift that has filled my days with joy, laughter and warmth. Thank you for being such a wonderful person; your kindness and understanding have made a deep impression on me.
+
+Now that the Christmas season is here, I think of the moments we shared, the laughter we enjoyed and the support we gave each other. I want to tell you that I appreciate you more than words can express. You mean everything to me, and I consider myself incredibly lucky to have you in my life.
+
+Even though we can't meet in person and our friendship exists in the digital world, I believe in the genuine connection we share. The miles that lie between us cannot diminish the bond we have forged; if anything, it has only strengthened our connection. Be it through shared experiences, heartfelt conversations or the simple joy of knowing that there is someone out there who cares.			
+							
+				
+I look forward to creating even more beautiful memories together in the coming year. I wanted to take a moment to express my love for you. I hope that I can spend many more Christmases with you, where we can talk, laugh and celebrate the magic of the holidays.
+
+Thank you for being the wonderful person you are and for being an important part of my life's journey. I wish you a Christmas full of love, warmth and all the happiness you deserve.
+
+With love and gratitude,
+
+Thasika 
+				
+P.S. I love you so much.
+(and yes i wrote the letter in german and translated it to english)
+            </textarea>
+            <br>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>

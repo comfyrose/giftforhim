@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winterland Surprise!</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff80bf, #ffccff);
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            color: white;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            background-color: #ff80bf;
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            margin: 10px;
+            cursor: pointer;
+            font-style: italic;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .heart {
+            color: #ff80bf;
+            position: absolute;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .snowflake {
+            color: white;
+            position: absolute;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+        }
+
+        #surpriseImage {
+            max-width: 30%;
+            height: auto;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .looping-text {
+            position: absolute;
+            top: 70%; /* Adjusted the vertical position */
+            left: 0;
+            white-space: nowrap;
+            animation: loopText 20s linear infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes loopText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Additional lines of "I love you" text */
+        .looping-text.line2 {
+            top: 75%; /* Adjusted the vertical position for the second line */
+            animation: loopText2 20s linear infinite;
+        }
+
+        .looping-text.line3 {
+            top: 80%; /* Adjusted the vertical position for the third line */
+            animation: loopText3 20s linear infinite;
+        }
+
+        .looping-text.line4 {
+            top: 85%; /* Adjusted the vertical position for the fourth line */
+            animation: loopText4 20s linear infinite;
+        }
+
+        /* Individual animations for each line */
+        @keyframes loopText2 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes loopText3 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes loopText4 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Background music -->
+    <audio controls autoplay muted loop>
+        <source src="ariana_grande.mp3">
+        This browser does not support HTML5 audio
+    </audio> 
+
+    <!-- Trigger music playback when the page loads -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backgroundMusic = document.querySelector('audio');
+            backgroundMusic.muted = false;
+            backgroundMusic.play();
+        });
+    </script>
+
+    <!-- Gift options above the title -->
+   <!-- In the main HTML file -->
+<button onclick="goToPage('surprise1.html')">Gift 1</button>
+<button onclick="goToPage('surprise2.html')">Gift 2</button>
+<button onclick="goToPage('surprise3.html')">Gift 3</button>
+
+<script>
+    function goToPage(pageUrl) {
+        window.location.href = pageUrl;
+    }
+</script>
+
+
+    <h1>Merry Christmas Mario ♥ </h1>
+
+    <!-- Image below the buttons -->
+    <img id="surpriseImage" src="hello_kitty.png" alt="Surprise Image">
+
+    <!-- Looping text animations -->
+    <div class="looping-text">I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you</div>
+    <div class="looping-text line2">I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you</div>
+    <div class="looping-text line3">I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you</div>
+    <div class="looping-text line4">I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you, I love you</div>
+
+    <!-- Generate more hearts -->
+    <script>
+        for (let i = 0; i < 10; i++) {
+            createHeart();
+        }
+
+        function createHeart() {
+            let heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '&#10084;';
+            document.body.appendChild(heart);
+
+            // Randomly position the heart on the page
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            heart.style.top = Math.random() * window.innerHeight + 'px';
+        }
+    </script>
+
+    <!-- Generate more snowflakes -->
+    <script>
+        for (let i = 0; i < 200; i++) {
+            createSnowflake();
+        }
+
+        function createSnowflake() {
+            let snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '&#10052;';
+            document.body.appendChild(snowflake);
+
+            // Randomly position the snowflake on the page
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.top = Math.random() * window.innerHeight + 'px';
+            snowflake.style.animationDuration = (Math.random() * 3 + 1) + 's';
+        }
+    </script>
+
+    <script>
+        function goToPage(pageUrl) {
+            window.location.href = pageUrl;
+        }
+    </script>
+</body>
+</html>
